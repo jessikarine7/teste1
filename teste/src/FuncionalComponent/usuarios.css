@@ -222,6 +222,10 @@ body{
   .container2{
     max-width: 60%;
   }
+
+  .input{
+    max-width: 20vh;
+  }
   
   .pesquisa{
     font-size: 20px;
@@ -269,10 +273,18 @@ body{
 
 } 
 
+@media (max-width: 700px) {
+
+  .pesquisa{
+    font-size: 15px;
+  }
+
+}
+
 @media (max-width: 600px) {
 
   .container2{
-    max-width: 40vh;
+    max-width: 60vh;
   }
 
   .input{
@@ -280,7 +292,7 @@ body{
   }
 
   .pesquisa{
-    font-size: 18px;
+    font-size: 17px;
   }
 
   .container1{
@@ -316,7 +328,7 @@ body{
 @media (max-width: 350px) {
 
   .container2{
-    max-width: 35vh;
+    max-width: 40vh;
     gap: 10px;
   }
 
@@ -325,7 +337,7 @@ body{
   }
 
   .pesquisa{
-    font-size: 16px;
+    font-size: 12px;
   }
 
   .etiqueta{

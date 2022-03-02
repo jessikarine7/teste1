@@ -82,7 +82,7 @@ export default function Lista(){
     <div className='container1'>
       
       <div className='container2'>
-        <label htmlFor='nome' className='pesquisa'>Pesquisa por nome</label>
+        <label htmlFor='nome' className='pesquisa'>Pesquisar nome</label>
 
         <div className='suggestion'>
           <input type="text" 
