@@ -116,7 +116,7 @@ export default function Lista(){
           <div  key={item.telefone}>
             <div className='etiqueta'>
               <button className='b-foto'>
-                <img className='foto' src={item.foto || '/img/foto.png'}/>
+                <img className='foto' src={item.foto || '/img/foto.png'} alt="foto do usuario"/>
               </button>
             </div>
 
@@ -125,9 +125,9 @@ export default function Lista(){
                 <div className='form'>
 
                   <div className='descricao'>
-                    <img className='icones' src="/img/nome2.png"/>
-                    <img className='icones' src="/img/cargo.png"/>
-                    <img className='icones' src="/img/telefone.png"/>
+                    <img className='icones' src="/img/nome2.png" alt="nome"/>
+                    <img className='icones' src="/img/cargo.png" alt="cargo"/>
+                    <img className='icones' src="/img/telefone.png" alt="telefone"/>
                   </div>
 
                   <div className='resultado'>
