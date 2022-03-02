@@ -4,22 +4,30 @@ import './usuarios.css';
 
 export default function Lista(){
 
+  // --------------------------SETANDO AS VARIÁVEIS---------------------------
+
   const [results, setResults] = useState([]);
   const [suggestions, setSuggestions] = useState([]);
 
+  // --------------------------CONSUMINDO API---------------------------
   
   const getUsuarios = async () => {
     axios
       .get('https://gist.githubusercontent.com/alencarlucas/4cd794e2e44bbe926ea4ab28da2fa3e7/raw/2c304035b03c3c5e2e708e4e82c49a42899e47ed/fiter.json')
       .then(response => {
-        // setResults(response.data)
-        setResults([
-          {nome:"Jessica", cargo:"Dev", telefone:"82998000944"},
-          {nome:"Valter", cargo:"Dev", telefone:"82996875791"},
-          {nome:"Duda", cargo:"Dev", telefone:"8299687545448"}
-        ])
+        setResults(response.data)
+
+        // --------------------TESTE COM MAIS CARDS------------------------
+
+        // setResults([
+        //   {nome:"Jessica", cargo:"Dev", telefone:"82998000944"},
+        //   {nome:"Valter", cargo:"Dev", telefone:"82996875791"},
+        //   {nome:"Duda", cargo:"Dev", telefone:"82996875454"}
+        // ])
       })
   }
+
+  // --------------------------RODANDO---------------------------
 
   useEffect(() =>  {
     
@@ -27,6 +35,7 @@ export default function Lista(){
     
   }, [])
 
+  // --------------------------SUGESTÃO DA PESQUISA---------------------------
 
   const onSuggestHandler = (text) => {
 
@@ -41,11 +50,12 @@ export default function Lista(){
       })
       
     }
-
     setSuggestions(filtro)
     setResults(filtro);
     setSuggestions([]);
   }
+
+  // --------------------------FILTRO---------------------------
 
   const onChangeHandler = (text) => {
   
@@ -64,6 +74,8 @@ export default function Lista(){
     console.log('filtro', filtro)
     setSuggestions(filtro)
   }
+
+  // --------------------------JSX---------------------------
 
   return(
 
@@ -102,7 +114,7 @@ export default function Lista(){
         {results.map((item) => 
           
           <div  key={item.telefone}>
-            <div className='capa'>
+            <div className='etiqueta'>
               <button className='b-foto'>
                 <img className='foto' src={item.foto || '/img/foto.png'}/>
               </button>
@@ -111,6 +123,7 @@ export default function Lista(){
             <div className='container3'>
               <div className='container4'>
                 <div className='form'>
+
                   <div className='descricao'>
                     <img className='icones' src="/img/nome2.png"/>
                     <img className='icones' src="/img/cargo.png"/>
@@ -122,6 +135,7 @@ export default function Lista(){
                     <p className='resultado'>{item.cargo}</p>
                     <p className='resultado'>{item.telefone}</p>
                   </div>
+
                 </div>
               </div> 
             </div>

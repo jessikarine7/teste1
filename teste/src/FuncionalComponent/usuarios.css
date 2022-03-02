@@ -1,5 +1,9 @@
 
+/* -----------------------FONTES---------------------- */
+
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap');
+
+/* -----------------------FUNDO---------------------- */
 
 body{
   padding: 0;
@@ -23,6 +27,8 @@ body{
     background-position: 0% 50%;
   }
 }
+
+/* -----------------------CONTAINERS---------------------- */
 
 .container1{
   display: flex;
@@ -50,7 +56,7 @@ body{
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color: #85F4FF;
+  background-color: #B5D4FF;
   width: 35vh;
   height: 35vh;
   border-bottom-left-radius: 30px;
@@ -63,21 +69,9 @@ body{
   flex-direction: column;
   justify-content: center;
   gap: 40px;
-  
 }
 
-.capa{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  background-color: rgba(0, 0, 0, 0.096);
-  width: 35vh;
-  height:15vh;
-  z-index: 1;
-  border-top-left-radius: 30px;
-  border-top-right-radius: 30px;
-}
+/* -----------------------PESQUISA---------------------- */
 
 .pesquisa{
   font-size: 25px;
@@ -118,48 +112,33 @@ body{
   overflow-y: auto;
 }
 
-.form{
+/* -----------------------CARD---------------------- */
+
+.card{
   display: flex;
-  flex-direction:row;
-  justify-content:center;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 500;
-  gap: 15px;
+  flex-direction: row;
+  justify-content: center;
+  gap: 7%;
 }
 
-.icones{
-  width: 35px;
-}
-
-.descricao{
+.etiqueta{
   display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.resultado{
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items:flex-start;
-  font-size: 15px;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 600;
-  color: #F4F9F9;
-  gap: 32px;
-  margin-top: 4px;
-}
-
-.foto{
-  border-radius: 40px;
-  width: 73px;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.096);
+  width: 35vh;
+  height:15vh;
+  z-index: 1;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
 }
 
 .b-foto{
   width: 12vh;
   height: 12vh;
   border: none;
-  border-radius: 50px;
+  border-radius: 65px;
   margin-top: 35%;
   z-index: 9;
   background-color: #fff;
@@ -169,15 +148,62 @@ body{
   justify-content: center;
 }
 
-.card{
-  display: flex;
-  flex-direction: row;
-  gap: 10%;
+.foto{
+  border-radius: 65px;
+  width: 10vh;
 }
 
-/* ----------------------RESPOSIVIDADE----------------- */
+.form{
+  display: flex;
+  flex-direction:row;
+  justify-content:center;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  gap: 15px;
+}
+
+.descricao{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.icones{
+  width: 35px;
+}
+
+.resultado{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items:flex-start;
+  font-size: 16px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  color: #F4F9F9;
+  gap: 32px;
+  margin-top: 4px;
+}
+
+/* ----------------------RESPONSIVIDADE----------------- */
 
 @media (max-width: 1200px) {
+
+  .container1{
+    margin-bottom: 10%;
+  }
+
+  .container2{
+    max-width: 60%;
+  }
+  
+  .pesquisa{
+    font-size: 25px;
+  }
+
+  .input{
+    width: 27vh;
+  }
 
   .card{
     display: flex;
@@ -185,14 +211,16 @@ body{
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    gap: 35px;
+    gap: 30px;
+    max-width: 90%;
   }
+
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1000px) {
 
   .container2{
-    max-width: 60vh;
+    max-width: 60%;
   }
   
   .pesquisa{
@@ -211,11 +239,35 @@ body{
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    gap: 45px;
-    max-width: 90vh;
+    gap: 30px;
+    max-width: 90%;
   }
-}
+  .resultado{
+    font-size: 18px;
+    gap: 26px;
+  }
 
+  .icones{
+    width: 35px;
+  }
+
+  .descricao{
+    gap: 17px;
+  }
+
+  .b-foto{
+    width: 12vh;
+    height: 12vh;
+    border-radius: 75px;
+  }
+
+  .foto{
+    width: 10vh;
+    height: 10vh;
+    border-radius: 75px;
+  }
+
+} 
 
 @media (max-width: 600px) {
 
@@ -228,7 +280,7 @@ body{
   }
 
   .pesquisa{
-    font-size: 15px;
+    font-size: 18px;
   }
 
   .container1{
@@ -243,10 +295,71 @@ body{
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    gap: 45px;
-    max-width: 70vh;
+    gap: 30px;
+    max-width: 90%;
   }
 
+  .resultado{
+    font-size: 18px;
+    gap: 26px;
+  }
+
+  .icones{
+    width: 35px;
+  }
+
+  .descricao{
+    gap: 17px;
+  }
 }
 
+@media (max-width: 350px) {
 
+  .container2{
+    max-width: 35vh;
+    gap: 10px;
+  }
+
+  .input{
+    max-width: 20vh;
+  }
+
+  .pesquisa{
+    font-size: 16px;
+  }
+
+  .etiqueta{
+    width: 27vh;
+    height:13vh;
+  }
+
+  .container3{
+    width: 27vh;
+    height: 27vh;
+  }
+
+  .b-foto{
+    width: 10vh;
+    height: 10vh;
+    border-radius: 65px;
+  }
+
+  .foto{
+    width: 8vh;
+    height: 8vh;
+    border-radius: 65px;
+  }
+
+  .resultado{
+    font-size: 13px;
+    gap: 18px;
+  }
+
+  .icones{
+    width: 25px;
+  }
+
+  .descricao{
+    gap: 15px;
+  }
+}  
